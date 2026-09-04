@@ -17,7 +17,12 @@ public class BankAccount {
         // Withdraw the requested amount if sufficient funds are available.
         // Return true if the withdrawal succeeds.
         // Return false otherwise. return false;
-        return false;
+        if (this.balance - amount >= 50) {
+            this.balance -= amount;
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public String getAccountSummary() {
